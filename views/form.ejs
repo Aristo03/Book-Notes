@@ -1,0 +1,27 @@
+<h2><%= book.id ? 'Edit Book' : 'Add a Book' %></h2>
+
+<form action="<%= book.id ? '/books/' + book.id + '?_method=PUT' : '/books' %>" method="POST" class="row g-3">
+  <div class="col-md-6">
+    <label class="form-label">Title</label>
+    <input name="title" value="<%= book.title || '' %>" class="form-control" required>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Author</label>
+    <input name="author" value="<%= book.author || '' %>" class="form-control" required>
+  </div>
+  <div class="col-md-12">
+    <label class="form-label">Notes</label>
+    <textarea name="notes" class="form-control"><%= book.notes || '' %></textarea>
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Rating (1-5)</label>
+    <input type="number" name="rating" value="<%= book.rating || '' %>" class="form-control" min="1" max="5">
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Read Date</label>
+    <input type="date" name="read_date" value="<%= book.read_date ? book.read_date.toISOString().substring(0, 10) : '' %>" class="form-control">
+  </div>
+  <div class="col-md-4 d-flex align-items-end">
+    <button type="submit" class="btn btn-success w-100"><%= book.id ? 'Update' : 'Add Book' %></button>
+  </div>
+</form>

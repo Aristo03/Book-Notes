@@ -1,0 +1,56 @@
+/* Light Purple Theme */
+body {
+  background-color: #f6f0ff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(to right, #e0bbff, #caa6f8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2d6f9;
+  background-color: #fff0ff;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(150, 100, 200, 0.2);
+}
+
+.btn-primary {
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6d28d9;
+}
+
+.btn-danger {
+  background-color: #f87171;
+  border-color: #f87171;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #ef4444;
+}
+
+.fade-in {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

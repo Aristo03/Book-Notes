@@ -1,0 +1,10 @@
+
+<h1>Edit "<%= book.title %>"</h1>
+<form method="POST" action="/books/<%= book.id %>?_method=PUT">
+  <input name="title" value="<%= book.title %>" required><br>
+  <input name="author" value="<%= book.author %>"><br>
+  <textarea name="notes"><%= book.notes %></textarea><br>
+  <label>Rating: <input type="number" name="rating" min="1" max="5" value="<%= book.rating %>"></label><br>
+  <label>Read Date: <input type="date" name="read_date" value="<%= book.read_date.toISOString().split('T')[0] %>"></label><br>
+  <button type="submit">Update</button>
+</form>
